@@ -12,3 +12,20 @@ available around the clock. Such programs are often designed to convincingly sim
 behave as a conversational partner. Chatbot will be an attempt to reduce the pain of the user and will help
 users in finding solutions to their problems and thus improving the security of code and infrastructure. This
 will be integrated into various chat systems to make it easier to use.
+
+It would be able to answer basic queries like:
+
+What is CSRF?
+This will provide the description of CSRF.
+
+How to mitigate CSRF?
+This will provide how to resolve CSRF.
+
+What are vulnerabilities assoicated with web applications?
+
+Which one is better - http or https?
+
+What is injecting HTML and javascript directly?
+
+
+
