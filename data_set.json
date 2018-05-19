@@ -40,6 +40,112 @@
       }
 
 
+      {
+         "ID":4,
+        
+         "Ques":[
+		 "What is CSRF?",
+		 "What does CSRF mean?",
+		 "What is Cross site request forgery",
+		 "Tell me something about CSRF",
+		 "Cross site request forgery",
+		 "CSRF"]
+		 
+         "Answer":"CrossSite Request Forgery (CSRF) is a type of attack that occurs when a malicious Web site,email, blog, instant message, or program causes a users Web browser to perform an unwantedaction on a trusted site for which the user is currently authenticated.The impact of a successful crosssite request forgery attack is limited to thecapabilities exposed by the vulnerable application. For example, this attack could resultin a transfer of funds, changing a password, or purchasing an item in the users context.In effect, CSRF attacks are used by an attacker to make a target system perform afunction (funds Transfer, form submission etc.) via the targets browser withoutknowledge of the target user at least until the unauthorised function has been committed."
+	}
+
+
+      {
+         "ID":5,
+        
+         "Ques":[
+		 "What is XXE injections?",
+		 "What does XXE injections mean?",
+		 "Tell me something about XXE injections",
+		 "XXE injections"
+		 "XXE"]
+		 
+         "Answer":"Description:Processing of an Xml eXternal Entity containing tainted data may lead to the disclosure ofconfidential information and other system impacts.The XML 1.0 standard defines the structure of an XML document.The standard defines a concept called an entity, which is a storage unit of some type.There exists a specific type of entity, an external general parsed entity often shortenedto an external entity, that can access local or remote content via a declared systemidentifier and the XML processor may disclose confidential information normally notaccessible by the application. Attacks can include disclosing local files, which maycontain sensitive data such as passwords or private user data."
+	}
+
+
+      {
+         "ID":6,
+        
+         "Ques":[
+		 "What is X Path injections?",
+		 "What does X Path injections mean?",
+		 "What is X Path?",
+		 "Tell me something about X Path injections",
+		 "X Path injections"]
+		 
+         "Answer":"Web applications heavily use databases to store and access the data they need for theiroperations. Historically, relational databases have been by far the most commontechnology for data storage, but in the last years, we are witnessing an increasingpopularity for databases that organise data using the XML language.Just like relational databases are accessed via SQL language, XML databases use XPath astheir standard query language."
+	}
+
+
+      {
+         "ID":7,
+        
+         "Ques":[
+		 "What is XML injection?",
+		 "What does XML injection mean?",
+		 "What is Cross Markup Language injection?",
+		 "Tell me something about XML injection",
+		 "XML injection"
+		 "Cross Markup Language"]
+		 
+         "Answer":"XML Injection is an attack technique used to manipulate or compromise the logic of an XMLapplication or service. The injection of unintended XML content and/or structures intoan XML message can alter the intended logic of the application. Further, XML injectioncan cause the insertion of malicious content into the resulting message/document."
+	}
+
+
+      {
+         "ID":8,
+        
+         "Ques":[
+		 "What is XSLT injections?",
+		 "What does XSLT injections mean?",
+		 "XSLT",
+		 "XSL Transformations",
+		 "EXtensible Stylesheet Language Transformations",
+		 "What is EXtensible Stylesheet Language Transformations",
+		 "What is XSLT",
+		 "Tell me something about XSLT injections",
+		 "XSLT injections"]
+		 
+         "Answer":"A vulnerability occurs when an XSL file is loaded from a source controlled by an attacker.When the attacker is given the opportunity to specify the source of the included XSL filehe could include a file which contains malicious code to be parsed on the target application.This could lead to, code execution, reading arbitrary files and many morevulnerabilities such as XSS."
+	}
+
+
+      {
+         "ID":9,
+        
+         "Ques":[
+		 "What is External DTD parsing?",
+		 "What does External DTD parsing mean?",
+		 "What is External DTD?",
+		 "Tell me something about External DTD parsing",
+		 "External DTD parsing"]
+		 
+         "Answer":"Processing of an external entity containing tainted data may lead to the disclosure of confidential information and other system impacts. The XML 1.0 standard defines the structure of an XML document. The standard defines a concept called an entity, which is a storage unit of some type. There exists a specific type of entity, an external general parsed entity often shortened to an external entity that can access local or remote content via a declared system identifier. The system identifier is assumed to be a URI that can be dereferenced (accessed) by the XML processor when processing the entity.The XML processor then replaces occurrences of the named external entity with the contents dereferenced by the system identifier. If the system identifier contains tainted data and the XML processor dereferences this tainted data, the XML processor may disclose confidential information normally not accessible by the application. Attacks can include disclosing local files, which may contain sensitive data such as passwords or private user data, using file: schemes or relative paths in the system identifier.Since the attack occurs relative to the application processing the XML document, an attacker may use this trusted application to pivot to other internal systems, possibly disclosing other internal content via HTTP(s) requests. In some situations, an XML processor library that is vulnerable to clientside memory corruption issues may be exploited by dereferencing a malicious URI, possibly allowing arbitrary code execution under the application account. Other attacks can access local resources that may not stop returning data, possibly impacting application availability if too many threads or processes are not released."
+	}
+
+
+      {
+         "ID":10,
+        
+         "Ques":[
+		 "What is LDAP injection?",
+		 "What does LDAP injection mean?",
+		 "What is Lightweight Directory Access Protocol?",
+		 "Tell me something about LDAP injection",
+		 "LDAP injection"
+		 "LDAP"
+		 "Lightweight Directory Access Protocol"]
+		 
+         "Answer":"LDAP (Lightweight Directory Access Protocol) Injection is an attack used to exploit web based applications that construct LDAP statements based on user input. When an application fails to properly sanitize user input, it is possible to modify LDAP statements using a local proxy. This could result in the execution of arbitrary commands such as granting permissions to unauthorized queries, and content modification inside the LDAP tree. The same advanced exploitation techniques available in SQL Injection can be similarly applied in LDAP Injection."
+	}
+
+
 
 
 
