@@ -1,5 +1,5 @@
 import json
-with open("data.json", "r") as read_file:
+with open("kb_item_data.json", "r") as read_file:
     data = json.load(read_file)
 
 a=data['items']
@@ -41,7 +41,7 @@ for t in title:
 #with open("abc.json", 'w') as outfile:
  #   json.dumps(ques_list, indent=4)
     #json.dump(des,outfile)
-data=open("dataa.json","w")
+data=open("data_set.json","w")
 i=1;
 print(len(des))
 data.write("{\n"+'"items": [\n')
