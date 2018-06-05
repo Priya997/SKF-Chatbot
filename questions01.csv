@@ -1,7 +1,6 @@
-classs,question
+class,question
 Description,What is Filename injection Path traversel ?
 Description,What does Filename injection Path traversel mean ?
-Solution,How to resolve PII protection ? 
 Description,Tell me something about Filename injection Path traversel ?
 Description,Filename injection Path traversel
 Description,Explain Filename injection Path traversel ?
@@ -473,17 +472,17 @@ Description,What do you know about Prepared statements and query parameterizatio
 Description,What can you tell me about Prepared statements and query parameterization ?
 Description,I want to know about XSS Prepared statements and query parameterization
 Description,Do you have information about Prepared statements and query parameterization ?
-Description,What is Are all passwords hashed salted and stretched ?
-Description,What does Are all passwords hashed salted and stretched mean ?
-Description,Tell me something about Are all passwords hashed salted and stretched ?
-Description,Are all passwords hashed salted and stretched ?
-Description,Explain Are all passwords hashed salted and stretched ?
-Description,Elaborate Are all passwords hashed salted and stretched ?
-Description,Can you tell me about Are all passwords hashed salted and stretched ?
-Description,What do you know about Are all passwords hashed salted and stretched ?
-Description,What can you tell me about Are all passwords hashed salted and stretched ?
-Description,I want to know about XSS Are all passwords hashed salted and stretched 
-Description,Do you have information about Are all passwords hashed salted and stretched ?
+Description,What is Are all passwords hashed,salted and stretched ?
+Description,What does Are all passwords hashed,salted and stretched mean ?
+Description,Tell me something about Are all passwords hashed,salted and stretched ?
+Description,Are all passwords hashed,salted and stretched
+Description,Explain Are all passwords hashed,salted and stretched ?
+Description,Elaborate Are all passwords hashed,salted and stretched ?
+Description,Can you tell me about Are all passwords hashed,salted and stretched ?
+Description,What do you know about Are all passwords hashed,salted and stretched ?
+Description,What can you tell me about Are all passwords hashed,salted and stretched ?
+Description,I want to know about XSS Are all passwords hashed,salted and stretched
+Description,Do you have information about Are all passwords hashed,salted and stretched ?
 Description,What is Sensitive information transmitted by unencrypted methods ?
 Description,What does Sensitive information transmitted by unencrypted methods mean ?
 Description,Tell me something about Sensitive information transmitted by unencrypted methods ?
@@ -3052,12 +3051,12 @@ Solution,How to mitigate Prepared statements and query parameterization ?
 Solution,How to stop Prepared statements and query parameterization ? 
 Solution,How to defend Prepared statements and query parameterization ? 
 Solution,How to get secured against Prepared statements and query parameterization ? 
-Solution,How to solve Are all passwords hashed
-Solution,How to resolve Are all passwords hashed
-Solution,How to mitigate Are all passwords hashed
-Solution,How to stop Are all passwords hashed
-Solution,How to defend Are all passwords hashed
-Solution,How to get secured against Are all passwords hashed
+Solution,How to solve Are all passwords hashed,salted and stretched ? 
+Solution,How to resolve Are all passwords hashed,salted and stretched ? 
+Solution,How to mitigate Are all passwords hashed,salted and stretched ? 
+Solution,How to stop Are all passwords hashed,salted and stretched ? 
+Solution,How to defend Are all passwords hashed,salted and stretched ? 
+Solution,How to get secured against Are all passwords hashed,salted and stretched ? 
 Solution,How to solve Sensitive information transmitted by unencrypted methods ? 
 Solution,How to resolve Sensitive information transmitted by unencrypted methods ? 
 Solution,How to mitigate Sensitive information transmitted by unencrypted methods ? 
@@ -4447,9 +4446,9 @@ Code,Code of Principle of complete mediation
 Code,Give me some sample code of Prepared statements and query parameterization
 Code,Code example of Prepared statements and query parameterization ?
 Code,Code of Prepared statements and query parameterization
-Code,Give me some sample code of Are all passwords hashed
-Code,Code example of Are all passwords hashed
-Code,Code of Are all passwords hashed
+Code,Give me some sample code of Are all passwords hashed,salted and stretched
+Code,Code example of Are all passwords hashed,salted and stretched ?
+Code,Code of Are all passwords hashed,salted and stretched
 Code,Give me some sample code of Sensitive information transmitted by unencrypted methods
 Code,Code example of Sensitive information transmitted by unencrypted methods ?
 Code,Code of Sensitive information transmitted by unencrypted methods
