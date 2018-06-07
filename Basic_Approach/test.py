@@ -17,7 +17,12 @@ def answer(question):
 	if type(entity)==str:
 		for d in ite:
 			if entity==d['title'].lower():
-				print(d[intent])
+				if intent=="Code":
+					print("Work under progress")
+					ques=input("enter another question ")
+					answer(ques)
+				else:
+					print(d[intent])
 	else:
 		print(entity)
 		ques=input("enter your choice ")
