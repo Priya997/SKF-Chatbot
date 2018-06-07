@@ -45,8 +45,13 @@ def entity(ques):
     if count==1:
         return ent
     else:
-        print("Select from these\n")
-        return ans
+        if len(ans)==1:
+           abc=ans[0]
+           abc=abc.lower().strip("\n")
+           return abc
+        else:
+           print("Select from these\n")
+           return ans
 
 
     

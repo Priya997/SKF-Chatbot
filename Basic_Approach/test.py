@@ -4,6 +4,7 @@ import json
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
 
+
 question=input("Enter Question ")
 intent=intent_classifier.predict(question)
 entity=entity_classifier.entity(question)
@@ -19,5 +20,6 @@ if type(entity)==str:
         		print(d[intent])
 else:
 	print(entity)
+	
 	
 
