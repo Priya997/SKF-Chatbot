@@ -5,6 +5,13 @@ def data():
         title=title.readlines()
     return title
 
+def code_data():
+    with open("datasets/entity_data.txt") as title:
+        title=title.readlines()
+    return title
+
+
+
 def phrase(ques):
     phrase=[]
     new_list=[]
@@ -21,8 +28,7 @@ def lis(l):
     ans=[]
     title=data()
     for i in new_l:
-        i=i.lower()
-        i=i.strip("\n")
+        i=i.lower().strip("\n")
         for t in title:
             t=t.lower()
             if i in t:
@@ -50,7 +56,7 @@ def entity(ques):
            abc=abc.lower().strip("\n")
            return abc
         else:
-           print("Select from these\n")
+           #print("Select from these\n")
            return ans
 
 
