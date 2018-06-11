@@ -25,40 +25,62 @@ def des_sol(question,intent):
                       if intent=="Description":
                           print("Description is : "+ d[intent])
                           intent="NULL"
+                          break
                       else:
                           print("Solution is : "+ d[intent])
                           intent="NULL"
-                      ques=input("\n Do you have more Questions Y/N ")
-                      if(ques=="y" or ques=="Y"):
-                          question=input("Enter new question ")
-                          answer(question)
-                      else:
-                          print("Thanks for using ")
+                          break
+
+            ques=input("\n Do you have more Questions Y/N ")
+            if(ques=="y" or ques=="Y"):
+                question=input("Enter new question ")
+                answer(question)
+            else:
+                print("Thanks for using ")
         else:
-             print("Please select from these options ")
-             print(entity)
-             question=input("enter your choice ")
-             des_sol(question,intent)
-               
+             if len(entity)>0:
+                print("Please select from these options ")
+                print(entity)
+                question=input("enter your choice ")
+                des_sol(question,intent)
+             else:
+                print("Please be more specific ")
+                question=input("enter your question again ")
+                answer(question)
+                               
 def code(question,intent):
         code_entity=code_classify.entity(question)
         read_file = open("datasets/code_data.json")
         code_data = json.load(read_file)
         code_ite=code_data['items']
+        code_languages=[]
+        count=0
         if len(code_entity)==2:
             entity=str(code_entity[0].strip("\n").lower())
             lang=str(code_entity[1].strip("\n").lower())
             for d in code_ite:
                  if entity==d['title'].lower():
-                      print(d['content'])
-                      print("\n Code language is " + d['code_lang'])
-                      intent="NULL"
-                      ques=input("\n Do you have more Questions Y/N ")
-                      if(ques=="y" or ques=="Y"):
-                          question=input("Enter new question ")
-                          answer(question)
-                      else:
-                          print("Thanks for using")
+                    code_languages.append(d['code_lang'])
+            for d in code_ite:
+                 if entity==d['title'].lower() and lang in code_languages:
+                    if lang==d['code_lang'].lower():
+                       print(d['content'])
+                       print("\n Code language is " + d['code_lang'])
+                       count=count+1
+
+                 
+            if count==0:    
+                    print("Select a language from below")
+                    print(code_languages)
+
+
+
+            ques=input("\n Do you have more Questions Y/N ")
+            if(ques=="y" or ques=="Y"):
+                   question=input("Enter new question ")
+                   answer(question)
+            else:
+                   print("Thanks for using")
 
         else:
              print("Please select from these options ")
@@ -68,4 +90,5 @@ def code(question,intent):
 
 question=input("Enter Question ")
 answer(question)
+
 
