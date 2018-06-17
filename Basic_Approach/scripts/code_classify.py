@@ -67,4 +67,4 @@ def entity(ques):
 
 
 #question=input("Enter question")
-#print(type(entity(question)[1]))
+#print(entity(question))
