@@ -33,7 +33,7 @@ def lis(l):
             t=t.lower()
             if i in t:
                 ans.append(t)
-
+    ans=list(set(ans))
     return ans
 
 def entity(ques):
