@@ -33,7 +33,7 @@ def lis(l):
         for t in title:
             t=t.lower()
             if i in t:
-                ans.append(t)
+                ans.append(t.strip("\n"))
     ans=list(set(ans))
     return ans,code_lang
 
@@ -62,7 +62,7 @@ def entity(ques):
             #print("Select from these\n")
             for i in range(len(ans)):
                ansD[i+1]=ans[i]
-            return ansD
+            return ansD,code_lang
             #print("Select from these\n")
             #print(ans)
 
@@ -72,4 +72,5 @@ def entity(ques):
 
 
 #question=input("Enter question")
-#print(entity(question))
+#y=(entity(question))
+#print(type(y[0]))

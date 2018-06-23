@@ -32,7 +32,7 @@ def lis(l):
         for t in title:
             t=t.lower()
             if i in t:
-               ans.append(t)
+               ans.append(t.strip("\n"))
 
     ans=list(set(ans))
     

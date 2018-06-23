@@ -41,7 +41,8 @@ def des_sol(question,intent):
         else:
              if len(entity)>0:
                 print("Please select from these options ")
-                print(entity)
+                for i in entity:
+                    print(str(i)+":"+entity[i])
                 n=int(input("enter your choice "))
                 #n=int(n)
                 question=entity[n]
@@ -58,9 +59,12 @@ def code(question,intent,language):
         code_ite=code_data['items']
         code_languages=[]
         count=0
-        if len(code_entity)==2:
+        if len(code_entity)==2 and type(code_entity[0])==str:
             entity=str(code_entity[0].strip("\n").lower())
-            language=str(code_entity[1].strip("\n").lower())
+            if language is None:
+               language=str(code_entity[-1].strip("\n").lower())
+            else:
+               language=language
             for d in code_ite:
                  if entity==d['title'].lower():
                     code_languages.append(d['code_lang'])
@@ -70,15 +74,18 @@ def code(question,intent,language):
                        print(d['content'])
                        print("\n Code language is " + d['code_lang'])
                        count=count+1
-
+                 
                  
             if count==0:
                     code_l={}
                     entity=str(code_entity[0].strip("\n").lower())
                     for i in range(len(code_languages)):
                         code_l[i+1]=code_languages[i]      
-                    print(code_l)
-                    n=int(input("Enter your choice "))
+
+                    print("The language you typed is not availabe. Select from the following:")
+                    for i in code_l:
+                        print(str(i)+":"+code_l[i])
+                    n=int(input("Enter your choice: "))
                     lang=code_l[n]
                     for d in code_ite:
                         if entity==d['title'].lower() and lang in code_languages:
@@ -99,12 +106,13 @@ def code(question,intent,language):
                    print("Thanks for using")
 
         else:
-             language=None
+             language=str(code_entity[-1].strip("\n").lower())
              print("Please select from these options ")
-             print(code_entity)
+             for i in code_entity[0]:
+                 print(str(i)+":"+code_entity[0][i])
              
              n=int(input("enter your choice "))
-             question=code_entity[n]
+             question=code_entity[0][n]
              code(question,"Code",language)
 
 question=input("Enter Question ")
