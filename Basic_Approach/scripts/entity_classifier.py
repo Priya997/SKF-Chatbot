@@ -32,8 +32,10 @@ def lis(l):
         for t in title:
             t=t.lower()
             if i in t:
-                ans.append(t)
+               ans.append(t)
+
     ans=list(set(ans))
+    
     return ans
 
 def entity(ques):
@@ -56,8 +58,12 @@ def entity(ques):
            abc=abc.lower().strip("\n")
            return abc
         else:
+           ansD={}
            #print("Select from these\n")
-           return ans
+           for i in range(len(ans)):
+               ansD[i+1]=ans[i]
+
+           return ansD
 
 
     

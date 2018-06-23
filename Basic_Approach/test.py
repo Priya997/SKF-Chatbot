@@ -42,7 +42,9 @@ def des_sol(question,intent):
              if len(entity)>0:
                 print("Please select from these options ")
                 print(entity)
-                question=input("enter your choice ")
+                n=int(input("enter your choice "))
+                #n=int(n)
+                question=entity[n]
                 des_sol(question,intent)
              else:
                 print("Please be more specific ")
@@ -71,9 +73,13 @@ def code(question,intent,language):
 
                  
             if count==0:
-                    entity=str(code_entity[0].strip("\n").lower())      
-                    print(code_languages)
-                    lang=input("Select a language ")
+                    code_l={}
+                    entity=str(code_entity[0].strip("\n").lower())
+                    for i in range(len(code_languages)):
+                        code_l[i+1]=code_languages[i]      
+                    print(code_l)
+                    n=int(input("Enter your choice "))
+                    lang=code_l[n]
                     for d in code_ite:
                         if entity==d['title'].lower() and lang in code_languages:
                               if lang==d['code_lang'].lower():
@@ -97,7 +103,8 @@ def code(question,intent,language):
              print("Please select from these options ")
              print(code_entity)
              
-             question=input("enter your choice ")
+             n=int(input("enter your choice "))
+             question=code_entity[n]
              code(question,"Code",language)
 
 question=input("Enter Question ")
