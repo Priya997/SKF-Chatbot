@@ -5,23 +5,16 @@ def data():
         title=title.readlines()
     return title
 
-def code_data():
-    with open("datasets/entity_data.txt") as title:
-        title=title.readlines()
-    return title
-
-
-
 def phrase(ques):
-    phrase=[]
+    phrase1=[]
     new_list=[]
     r=Rake()
     question=ques
     r.extract_keywords_from_text(question)
-    phrase=r.get_ranked_phrases()
-    for items in phrase:
+    phrase1=r.get_ranked_phrases()
+    for items in phrase1:
         new_list.extend(items.lower().split())
-    return new_list    
+    return phrase1,new_list    
 
 def lis(l):
     new_l=l
@@ -38,17 +31,22 @@ def lis(l):
     
     return ans
 
-def entity(ques):
+   
+
+def finalA(ques,ans):
+
     count=0
-    list_p=phrase(ques)
-    ans=lis(list_p)
     for i in ans:
-        i=i.strip("\n")
-        i=i.lower()
+
+        i=i.strip("\n").lower()
         if i in ques.lower():
+          if ques.lower() in i:
             count=count+1
             ent=i
-            
+            break
+          else:
+            count=count+1
+            ent=i
             break
     if count==1:
         return ent
@@ -62,8 +60,24 @@ def entity(ques):
            #print("Select from these\n")
            for i in range(len(ans)):
                ansD[i+1]=ans[i]
-
            return ansD
+
+
+def entity(ques):
+   
+    ph,list_p=phrase(ques)
+    ans1=lis(ph)    
+    ans=lis(list_p)
+    y=finalA(ques,ans1)
+    if len(ans1) == 0 and len(y) == 0:
+       y=finalA(ques,ans)
+       return y
+    elif len(ans)==len(ans1):
+       y=finalA(ques,ans)
+       return y
+    else:
+       y=finalA(ques,ans1)
+       return y
 
 
     
@@ -71,4 +85,4 @@ def entity(ques):
 
 
 #question=input("Enter question")
-#entity(question)
+#print(entity(question))
