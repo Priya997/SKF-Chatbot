@@ -58,6 +58,7 @@ def finalA(ques,ans):
         else:
            ansD={}
            #print("Select from these\n")
+
            for i in range(len(ans)):
                ansD[i+1]=ans[i]
            return ansD

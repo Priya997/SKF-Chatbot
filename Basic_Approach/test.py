@@ -24,11 +24,11 @@ def des_sol(question,intent):
             for d in ite:
                  if entity==d['title'].lower():
                       if intent=="Description":
-                          print("Description is : "+ d[intent])
+                          print("Description for "+d['title']+" is : "+ d[intent])
                           intent="NULL"
                           break
                       else:
-                          print("Solution is : "+ d[intent])
+                          print("Solution for "+d['title']+" is : "+ d[intent])
                           intent="NULL"
                           break
 
@@ -71,7 +71,7 @@ def code(question,intent,language):
             for d in code_ite:
                  if entity==d['title'].lower() and language in code_languages:
                     if language==d['code_lang'].lower():
-                       print(d['content'])
+                       print("Code for "+ d['content'])
                        print("\n Code language is " + d['code_lang'])
                        count=count+1
                  
@@ -90,7 +90,7 @@ def code(question,intent,language):
                     for d in code_ite:
                         if entity==d['title'].lower() and lang in code_languages:
                               if lang==d['code_lang'].lower():
-                                 print(d['content'])
+                                 print("Code for "+ d['content'])
                                  print("\n Code language is " + d['code_lang'])
                                  count=count+1
 
@@ -106,7 +106,11 @@ def code(question,intent,language):
                    print("Thanks for using")
 
         else:
-             language=str(code_entity[-1].strip("\n").lower())
+
+             if language is None:
+               language=str(code_entity[-1].strip("\n").lower())
+             else:
+               language=language
              print("Please select from these options ")
              for i in code_entity[0]:
                  print(str(i)+":"+code_entity[0][i])
