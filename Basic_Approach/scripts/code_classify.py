@@ -22,7 +22,7 @@ def lis(l):
     ans=[]
     title=data()
     for l in new_l:
-        l=l.lower().strip("\n")
+        l=l.lower().strip("\n").strip()
         if l in language_list:
              code_lang=l
              new_l.remove(l)
@@ -41,6 +41,7 @@ def entity(ques):
     
     count=0
     list_p=phrase(ques)
+    #print(list_p)
     ans,code_lang=lis(list_p)
     
     for i in ans:
@@ -73,4 +74,4 @@ def entity(ques):
 
 #question=input("Enter question")
 #y=(entity(question))
-#print(type(y[0]))
+#print(y)
