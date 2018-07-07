@@ -1,5 +1,6 @@
 from scripts import intent_classifier
-from scripts import entity_classifier
+from scripts import entity_classifier1
+from scripts import entity_classifier2
 from scripts import code_classify
 import json
 import nltk
@@ -16,13 +17,16 @@ def answer(question):
 
 
 def des_sol(question,intent):
-        entity=entity_classifier.entity(question)
+        entity=entity_classifier1.entity_recognizer(question.lower())
+        if entity is None:
+           entity=entity_classifier2.entity(question)
+      
         read_file = open("datasets/desc_sol.json")
         data = json.load(read_file)
         ite=data['items']
         if type(entity)==str:
             for d in ite:
-                 if entity==d['title'].lower():
+                 if entity.lower()==d['title'].lower():
                       if intent=="Description":
                           print("Description for "+d['title']+" is : "+ d[intent])
                           intent="NULL"
