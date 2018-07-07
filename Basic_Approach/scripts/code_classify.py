@@ -30,7 +30,7 @@ def lis(l):
              break
         else:
              code_lang="NULL"
-    print(code_lang)
+    #print(code_lang)
     for i in new_l:
         i=i.lower().strip("\n")
         for t in title:
@@ -75,6 +75,6 @@ def entity(ques):
         
 
 
-question=input("Enter question")
-y=(entity(question))
-print(y)
+#question=input("Enter question")
+#y=(entity(question))
+#print(y)
