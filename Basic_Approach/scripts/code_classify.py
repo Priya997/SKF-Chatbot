@@ -24,10 +24,13 @@ def lis(l):
     for l in new_l:
         l=l.lower().strip("\n").strip()
         if l in language_list:
+             #print(l)
              code_lang=l
              new_l.remove(l)
+             break
         else:
              code_lang="NULL"
+    print(code_lang)
     for i in new_l:
         i=i.lower().strip("\n")
         for t in title:
@@ -35,6 +38,7 @@ def lis(l):
             if i in t:
                 ans.append(t.strip("\n"))
     ans=list(set(ans))
+
     return ans,code_lang
 
 def entity(ques):
@@ -43,7 +47,6 @@ def entity(ques):
     list_p=phrase(ques)
     #print(list_p)
     ans,code_lang=lis(list_p)
-    
     for i in ans:
         i=i.strip("\n").lower()
         if i in ques.lower():
@@ -72,6 +75,6 @@ def entity(ques):
         
 
 
-#question=input("Enter question")
-#y=(entity(question))
-#print(y)
+question=input("Enter question")
+y=(entity(question))
+print(y)
