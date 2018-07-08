@@ -21,7 +21,7 @@ def des_sol(question,intent):
         if entity is None:
            entity=entity_classifier2.entity(question)
       
-        read_file = open("datasets/desc_sol.json")
+        read_file = open("datasets/desc_sol.json","r",encoding='UTF8')
         data = json.load(read_file)
         ite=data['items']
         if type(entity)==str:
@@ -58,7 +58,7 @@ def des_sol(question,intent):
                                
 def code(question,intent,language):
         code_entity=code_classify.entity(question)
-        read_file = open("datasets/code_data.json")
+        read_file = open("datasets/code_data.json","r",encoding='UTF8')
         code_data = json.load(read_file)
         code_ite=code_data['items']
         code_languages=[]
