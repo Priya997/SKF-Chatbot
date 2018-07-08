@@ -1,7 +1,7 @@
 from rake_nltk import Rake
 import nltk
 def data():
-    with open("datasets/entity_data.txt") as title:
+    with open("datasets/entity_data.txt","r",encoding='UTF8') as title:
         title=title.readlines()
     return title
 
