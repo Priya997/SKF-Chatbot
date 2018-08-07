@@ -38,3 +38,5 @@ Now, You can ask whatever question you want to ask. Like:
   4. Code example for xss filtering in java etc.
   
 This is the offline version of the chatbot which can easily be used via your terminal. 
+
+![image](https://github.com/Priya997/SKF-Chatbot/blob/master/demo.png)
