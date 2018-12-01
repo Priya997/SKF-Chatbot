@@ -1,5 +1,9 @@
 # SKF-Chatbot [GSOC'18]
 
+[![Build Status](https://travis-ci.com/Priya997/SKF-Chatbot)](https://travis-ci.com/Priya997/SKF-Chatbot)
+![In Progress](https://img.shields.io/badge/In--progress-true-green.svg?longCache=true&style=flat-square) <br />
+
+
 ### What is SKF?
 Security Knowledge Framework (SKF) is a tool that is used as a guide for building and verifying secure software. It can also be used to train developers about application security. The OWASP Security Knowledge Framework is an expert system web-application that uses the OWASP Application Security Verification Standard and other resources. It can be used to support developers in pre-development (security by design) as well as after code is released (OWASP ASVS Level 1-3).
 
