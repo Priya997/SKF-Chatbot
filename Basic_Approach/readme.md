@@ -7,7 +7,7 @@
   
   3. ``` cd Basic_Approach ```
   
-  4. ``` pip install -u requirements.txt ``` [To install all the requirements]
+  4. ``` pip install -r requirements.txt ``` [To install all the requirements]
 
   5. ``` python test.py ```
 
