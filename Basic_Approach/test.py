@@ -2,6 +2,7 @@ from scripts import intent_classifier
 from scripts import entity_classifier1
 from scripts import entity_classifier2
 from scripts import code_classify
+from scripts import asvsChecklist
 import json
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
@@ -11,6 +12,16 @@ def answer(question):
         intent=intent_classifier.predict(question)
         if intent=="Description" or intent=="Solution":
                    des_sol(question,intent)
+        elif intent=="security_control":
+                   result=asvsChecklist.checklist()
+                   print(result)
+                   ques=input("\n Do you have more Questions Y/N ")
+                   if(ques=="y" or ques=="Y"):
+                        question=input("Enter new question ")
+                        answer(question)
+                   else:
+                        print("Thanks for using ")
+                   
         else:
                    lang=None
                    code(question,intent,lang)
