@@ -1,0 +1,64 @@
+{
+   "items":[
+      {
+         "kb_item_id":null,
+         "kb_item_title":null,
+         "kb_items_content":null,
+         "checklist_items_id":434,
+         "checklist_items_checklistID":"1.0",
+         "checklist_items_content":"Architecture, design and threat modelling",
+         "checklist_items_type":3,
+         "include_always":"True",
+         "question_ID":0,
+         "cwe":0
+      },
+      {
+         "kb_item_id":"161",
+         "kb_item_title":"identify all application components",
+         "kb_items_content":" Description:\n\nWhen you are building an application you first want to map where you are placing\nsource files, libraries and executables.\n\nWith these components identified and mapped, it becomes transparent where possible\npitfalls might be in your application and increases the maintainability of the\nsystem. Also, you have an indicator where possible reinforcements have to be\nimplemented to avoid attacks.(i.e places where your application contains executable's)\n\n Solution:\n\nVerify that all application components (either individual or groups of source files,\nlibraries, and/or executables) that are present in the application are identified.\n\nWhen you identified these components you may want to map and document them in order to\nhave a quick reference to this infrastructure when needed.\n",
+         "checklist_items_id":435,
+         "checklist_items_checklistID":"1.1",
+         "checklist_items_content":"Verify that all application components are identified and are known to be needed",
+         "checklist_items_type":3,
+         "include_always":"True",
+         "question_ID":0,
+         "cwe":0
+      },
+      {
+         "kb_item_id":null,
+         "kb_item_title":null,
+         "kb_items_content":null,
+         "checklist_items_id":436,
+         "checklist_items_checklistID":"2.0",
+         "checklist_items_content":"Authentication Verification Requirements",
+         "checklist_items_type":3,
+         "include_always":"True",
+         "question_ID":0,
+         "cwe":0
+      },
+      {
+         "kb_item_id":"257",
+         "kb_item_title":"Unauthorised access and modification",
+         "kb_items_content":" Description:\n\nThroughout the development of the application there must be perpetual checks in place to check\nif all pages and resources by default require authentication except those specifically intended to be public.\n\nSometimes developers simply forget to implement these checks, or they remove the checks \ntemporarily for testing purposes. \n\n\n Solution:\n\nVerify all access controls are implemented properly in order to prevent a user access data/functions which \nhe was not intended to use.\n",
+         "checklist_items_id":437,
+         "checklist_items_checklistID":"2.1",
+         "checklist_items_content":"Verify all pages and resources by default require authentication except those specifically intended to be public",
+         "checklist_items_type":3,
+         "include_always":"True",
+         "question_ID":0,
+         "cwe":0
+      },
+      {
+         "kb_item_id":"108",
+         "kb_item_title":"Server side validation",
+         "kb_items_content":" Description:\n\nValidation of user supplied input must always be enforced on the server side.\nWhenever validation of the input is being perfomed on the client side then\nthe constraints can easilly be bypassed whenever an attacker uses an intercepting proxy\nwhich he can use to tamper data after they have been validated and send to the server. \n\nOr the attacker can simply change the constraint on the client side in his browser to bypass the \nconstraints.\n\n Solution:\n\nAll validation of input should be handled on the server side. Whenever the validation is handled on \nthe server side, the validation logic is outside of the scope of the attacker and he can not influence\nthe results.\n\nNote: Validation of input should never be done with a blacklisting aproach since attackers can be very\nnifty in bypassing these type of constraints. Always perform white list validation checks preferably in\ncombination on type checking. i.e if the application expects the value to be an integer, do not make\nthe application accept a value of a string. This input should be logged and rejected.\n",
+         "checklist_items_id":438,
+         "checklist_items_checklistID":"2.2",
+         "checklist_items_content":"Verify all authentication controls are enforced on the server side",
+         "checklist_items_type":3,
+         "include_always":"True",
+         "question_ID":0,
+         "cwe":0
+      }
+   ]
+}
